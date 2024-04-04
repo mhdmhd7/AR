@@ -4,10 +4,11 @@ from django.test import TestCase
 from django.urls import reverse
 from rest_framework.test import APITestCase
 from rest_framework import status
-from .models import User, PasswordReset
+from .models import User
 from django.contrib.auth import authenticate
-from django.http import JsonResponse
+from django.http import JsonResponse  # Add this import
 from rest_framework.authtoken.models import Token
+
 
 class SignUpLoginTests(APITestCase):
     def test_login_failure(self):
